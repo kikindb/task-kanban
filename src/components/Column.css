@@ -1,0 +1,37 @@
+.column-container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  flex: 1;
+}
+
+.column-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 8px var(--primary-color);
+}
+
+.column-body {
+  width: 100%;
+  min-width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
+.column-item {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.column-item > div {
+  margin-bottom: 1rem;
+}
