@@ -23,7 +23,7 @@ export default function Navigation() {
       <div className='logo-container'>
         <LogoSVG />
         <h1>
-          Kanban App <small>{data.version}</small>
+          Task Kanban App <small>{data.version}</small>
         </h1>
       </div>
       <ul className='nav-list'>
