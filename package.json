@@ -1,8 +1,9 @@
 {
-  "name": "kikindb.kanban",
+  "name": "task-kanban-react",
+  "author": "Jesus Enrique Dick Bustamante",
   "homepage": "https://kikindb.github.io/task-kanban/",
   "private": true,
-  "version": "0.2.2",
+  "version": "1.0.0",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
