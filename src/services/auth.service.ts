@@ -1,11 +1,11 @@
-const apiUrl = `${import.meta.env.VITE_API_URL}auth/`;
+const apiUrl = `${import.meta.env.VITE_API_URL}auth`;
 
 export async function authByPassword(email: string, password: string) {
   try {
     const response = await fetch(apiUrl, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         email: email,
@@ -15,8 +15,10 @@ export async function authByPassword(email: string, password: string) {
 
     const data = await response.json();
     if (response.ok) {
-      const authToken = response.headers.get("x-auth-token");
+      const authToken = response.headers.get('x-auth-token');
       data.token = authToken;
+
+      console.log('authByPassword:: token: ', authToken);
       return data;
     }
     throw new Error(data.message || data.statusText);

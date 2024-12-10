@@ -1,25 +1,25 @@
-import { Task, TaskStatus } from "../models/Task";
+import { Task, TaskStatus } from '../models/Task';
 
 export const taskObj: Task = {
-  id: "1",
-  title: "Learn React JS",
-  body: "Watch Udemy courses",
-  author: "Enrique Dick",
-  createdAt: "08/08/1994",
+  id: '1',
+  title: 'Learn React JS',
+  body: 'Watch Udemy courses',
+  author: 'Enrique Dick',
+  createdAt: '08/08/1994',
   status: TaskStatus.done,
 };
 
-const apiUrl = `${import.meta.env.VITE_API_URL}tasks`;
+const apiUrl = `${import.meta.env.VITE_API_URL}task`;
 
 export async function getTasks(token: string, signal?: AbortSignal) {
   let tasksArr: Task[] = [];
 
   try {
     const response = await fetch(apiUrl, {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
-        "x-auth-token": token,
+        'Content-Type': 'application/json',
+        'x-auth-token': token,
       },
       signal: signal,
     });
@@ -36,10 +36,10 @@ export async function getTasks(token: string, signal?: AbortSignal) {
 export async function saveTask(task: Task, token: string) {
   try {
     const response = await fetch(apiUrl, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        "x-auth-token": token,
+        'Content-Type': 'application/json',
+        'x-auth-token': token,
       },
       body: JSON.stringify({
         title: task.title,
@@ -57,10 +57,10 @@ export async function saveTask(task: Task, token: string) {
 export async function patchTask(task: Task, token: string) {
   try {
     const response = await fetch(`${apiUrl}/${task.id}`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: {
-        "Content-Type": "application/json",
-        "x-auth-token": token,
+        'Content-Type': 'application/json',
+        'x-auth-token': token,
       },
       body: JSON.stringify({
         title: task.title,
