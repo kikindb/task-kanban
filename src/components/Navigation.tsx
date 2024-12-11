@@ -35,7 +35,7 @@ export default function Navigation() {
             <li className='nav-item'>
               <NavLink to={ROUTES.PRIVATE.BACKLOG}>Backlog</NavLink>
             </li>
-            {isAuth.admin && (
+            {isAuth.role === 'ADMIN' && (
               <li className='nav-item'>
                 <NavLink to={ROUTES.PRIVATE.ADMIN}>Admin</NavLink>
               </li>
