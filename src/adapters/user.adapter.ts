@@ -5,7 +5,7 @@ export function userAdapter(data: any) {
     name: data.name,
     email: data.email,
     image: data.image,
-    role: data.role,
+    admin: data.admin,
     createdAt: data.createdAt,
     updatedAt: data.updatedAt,
   };
