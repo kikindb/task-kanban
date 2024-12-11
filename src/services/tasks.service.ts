@@ -44,7 +44,7 @@ export async function saveTask(task: Task, token: string) {
       body: JSON.stringify({
         title: task.title,
         body: task.body,
-        author: task.author,
+        authorName: task.author,
         status: task.status,
       }),
     });
@@ -65,7 +65,7 @@ export async function patchTask(task: Task, token: string) {
       body: JSON.stringify({
         title: task.title,
         body: task.body,
-        author: task.author,
+        authorName: task.author,
         status: task.status,
       }),
     });
